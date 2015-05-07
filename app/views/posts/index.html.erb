@@ -2,6 +2,7 @@
 
 <% @posts.each do |post| %>
   <h2><p><%= post.title %></p></h2>
+  <%# Only show post authors if current user is signed in %>
   <% if signed_in? %>
     <p>Author: <%= post.user.name %></p>
   <% end %>

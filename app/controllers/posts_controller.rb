@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  # Check if user logged in. Helper method in ApplicationController.
+  # Check if user logged in. Helper method in SessionsHelper.
   before_action :signed_in?, only: [:new, :create]
 
   def index
