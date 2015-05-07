@@ -1,0 +1,14 @@
+<h1>Posts#index</h1>
+
+<% @posts.each do |post| %>
+  <h2><p><%= post.title %></p></h2>
+  <% if signed_in? %>
+    <p>Author: <%= post.user.name %></p>
+  <% end %>
+  <p><%= post.body %></p>
+<% end %>
+
+<% if signed_in? %>
+  <%= link_to 'new', 'posts/new' %>
+<% end %>
+<%= link_to 'signin/out', login_path %>
